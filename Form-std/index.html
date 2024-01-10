@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Table</title>
+    <script defer src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <!-- Filter form -->
+      <h2>Filter:</h2>
+      <form id="filterForm">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="nameFilter">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nameFilter"
+              placeholder="Filter by Name"
+            />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="facultyFilter">Faculty</label>
+            <input
+              type="text"
+              class="form-control"
+              id="facultyFilter"
+              placeholder="Filter by Faculty"
+            />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="startYearFilter">Start Year</label>
+            <input
+              type="number"
+              class="form-control"
+              id="startYearFilter"
+              placeholder="Filter by Start Year"
+            />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="endYearFilter">End Year</label>
+            <input
+              type="number"
+              class="form-control"
+              id="endYearFilter"
+              placeholder="Filter by End Year"
+            />
+          </div>
+        </div>
+      </form>
+
+      <!--Student add form -->
+
+      <h2>New student form</h2>
+      <form id="addStudentForm">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="patronymic">Patronymic</label>
+            <input
+              type="text"
+              class="form-control"
+              id="patronymic"
+              placeholder="Patronymic"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="birthDate">Birth Date</label>
+            <input type="date" class="form-control" id="birthDate" required />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="startYear">Start Year</label>
+            <input
+              type="number"
+              class="form-control"
+              id="startYear"
+              placeholder="Start Year"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="faculty">Faculty</label>
+            <input
+              type="text"
+              class="form-control"
+              id="faculty"
+              placeholder="Faculty"
+              required
+            />
+          </div>
+          
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary mb-2"
+          id="addStudentButton"
+        >
+          Add Student
+        </button>
+      </form>
+      <h2>Students Table</h2>
+      <table class="table table-bordered">
+        <thead class="thead-dark" id="students-table-header">
+          <tr>
+            <th style="cursor: pointer" scope="col" data-column-type="fullName">
+              Full Name
+            </th>
+            <th
+              style="cursor: pointer"
+              scope="col"
+              data-column-type="birthDate"
+            >
+              Birth Date
+            </th>
+            <th
+              style="cursor: pointer"
+              scope="col"
+              data-column-type="startYear"
+            >
+              Start Year
+            </th>
+            <th style="cursor: pointer" scope="col" data-column-type="faculty">
+              Faculty
+            </th>
+            <th  scope="col" data-column-type="remove">
+              Remove
+            </th>
+          </tr>
+        </thead>
+        <tbody id="students-table-body"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
